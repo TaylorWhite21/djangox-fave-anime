@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+{% block content %}
+  
+  <a href="{%url 'anime-create' %}">Add New anime</a>
+
+  <ul>
+    {% for anime in object_list %}
+      <li>
+        <a href="{%url 'anime-detail' anime.pk%}">{{anime.name}}</a>
+      </li>
+    {%endfor%}
+  </ul>
+{% endblock content %}
+
+

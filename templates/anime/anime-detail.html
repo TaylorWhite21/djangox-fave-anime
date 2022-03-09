@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+ 
+{% block content %}
+<a href={%url 'anime-list' %}>Anime List</a>
+  <h2>Details about {{anime.name}}</h2>
+  <p>Poster: {{anime.owner}}</p>
+  <p>Anime description: {{anime.description}}</p>
+  <a href="{% url 'anime-update' anime.pk %}">+ Update anime</a>
+  <a href="{% url 'anime-delete' anime.pk %}">+ Delete anime</a>
+{% endblock content %}
